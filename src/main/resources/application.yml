@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gcp:
+      spanner:
+        emulator:
+          enabled: true
+        enabled: true
+        database: joara
+        instance-id: joara-spanner-test
+        project-id: joara-next-dev
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:/flywaydb/migration
+    create-schemas: true
+    baseline-version: 0 # script 가 V1 부터 시작하므로 0
